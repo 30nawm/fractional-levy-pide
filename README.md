@@ -35,7 +35,7 @@ Solves the time-fractional PIDE:
 - **Fractional Lévy Price**: 10.28
 - **PIDE-MC Error**: ~1.6% (captures jumps better than BS).
 
-![Price Surface and Comparisons](results.png)
+![Price Surface and Comparisons](fractional_levy_real_options_results.png)
 
 ## Real Data Example
 Calibrated to S&P500 (^GSPC, 1y returns, kurtosis=4.2 → nu=0.35). Example price: 12.1 (vs MC 12.0).

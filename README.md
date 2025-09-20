@@ -50,6 +50,3 @@ Calibrated to S&P500 (^GSPC, 1y returns, kurtosis=4.2 → nu=0.35). Example pric
 - Extend to space-fractional derivatives (Riesz).
 - Integrate PyTorch for GPU-accelerated HFT solvers.
 - Multi-asset pricing with correlated Lévy processes.
-
-## Contact
-[Your GitHub/Email]. Built for quant roles in hedge funds/asset management.

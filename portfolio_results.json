@@ -1,29 +1,29 @@
 {
-  "SPY": {
-    "symbol": "SPY",
-    "timestamp": "2025-09-30T09:47:59.760523",
+  "EWG": {
+    "symbol": "EWG",
+    "timestamp": "2025-09-30T10:48:40.914655",
     "option": {
-      "symbol": "SPY",
-      "stock_price": 663.6799926757812,
-      "strike": 509.0,
-      "market_price": 120.7,
-      "bid": 154.32,
-      "ask": 157.13,
-      "volume": 22,
-      "open_interest": 17,
-      "implied_vol": 0.5709271423339843,
-      "time_to_expiration": 0.08213552361396304,
-      "days_to_expiration": 30,
-      "expiration": "2025-10-31"
+      "symbol": "EWG",
+      "stock_price": 41.310001373291016,
+      "strike": 34.0,
+      "market_price": 7.9,
+      "bid": 8.4,
+      "ask": 9.7,
+      "volume": 18,
+      "open_interest": 27,
+      "implied_vol": 1.3515657421874998,
+      "time_to_expiration": 0.04380561259411362,
+      "days_to_expiration": 16,
+      "expiration": "2025-10-17"
     },
     "vg_params": {
-      "theta": -0.10000035437358004,
-      "sigma_vg": 0.1499998818754733,
-      "nu": 0.24999976375094665
+      "theta": 0.10000000042166006,
+      "sigma_vg": 0.2499999997188933,
+      "nu": 0.40000000070276676
     },
     "prices": {
       "BS": {
-        "price": 158.73469712833952,
-        "error_pct": 31.511762326710453,
-        "time": 0.0,
+        "price": 8.898729329937474,
+        "error_pct": 12.642143416930047,
+        "time": 0.002374887466430664,
         "valid": 

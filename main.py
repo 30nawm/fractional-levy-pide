@@ -8,6 +8,8 @@ from datetime import datetime
 import logging
 import time
 import json
+from options_data_fetcher import get_option_data, get_historical_volatility
+from portfolio_constructor import PORTFOLIO
 
 # Setup professional logging
 logging.basicConfig(
@@ -24,13 +26,6 @@ from pide_solver import fractional_pide_solver
 from config import update_config_with_option_data, r
 from levy_simulation import validate_vg_parameters
 
-# Portfolio of 15 high-liquidity symbols across markets
-PORTFOLIO = {
-    'US_Mega_Cap': ['SPY', 'QQQ', 'AAPL', 'MSFT', 'GOOGL'],
-    'US_High_Vol': ['TSLA', 'NVDA', 'AMD'],
-    'European': ['EWG', 'EWU', 'EZU'],
-    'Energy': ['USO', 'XLE', 'XOP', 'OXY']
-}
 
 class AnalysisEngine:
     
@@ -364,6 +359,17 @@ class AnalysisEngine:
         if not self.results:
             return
         
+        # Helper function to convert numpy types to Python native types
+        def convert_value(v):
+            if isinstance(v, (np.integer, np.floating)):
+                return float(v)
+            elif isinstance(v, np.bool_):
+                return bool(v)
+            elif isinstance(v, np.ndarray):
+                return v.tolist()
+            else:
+                return v
+        
         # DataFrame for CSV
         rows = []
         for result in self.results.values():
@@ -400,12 +406,10 @@ class AnalysisEngine:
             json_results[sym] = {
                 'symbol': result['symbol'],
                 'timestamp': result['timestamp'],
-                'option': {k: float(v) if isinstance(v, (np.integer, np.floating)) else v 
-                          for k, v in result['option'].items()},
+                'option': {k: convert_value(v) for k, v in result['option'].items()},
                 'vg_params': result['vg_params'],
                 'prices': {
-                    method: {k: float(v) if isinstance(v, (np.integer, np.floating)) else v 
-                            for k, v in data.items() if k != 'grid'}
+                    method: {k: convert_value(v) for k, v in data.items() if k != 'grid'}
                     for method, data in result['prices'].items() 
                     if data and isinstance(data, dict)
                 }

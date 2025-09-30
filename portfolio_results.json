@@ -1,0 +1,29 @@
+{
+  "SPY": {
+    "symbol": "SPY",
+    "timestamp": "2025-09-30T09:47:59.760523",
+    "option": {
+      "symbol": "SPY",
+      "stock_price": 663.6799926757812,
+      "strike": 509.0,
+      "market_price": 120.7,
+      "bid": 154.32,
+      "ask": 157.13,
+      "volume": 22,
+      "open_interest": 17,
+      "implied_vol": 0.5709271423339843,
+      "time_to_expiration": 0.08213552361396304,
+      "days_to_expiration": 30,
+      "expiration": "2025-10-31"
+    },
+    "vg_params": {
+      "theta": -0.10000035437358004,
+      "sigma_vg": 0.1499998818754733,
+      "nu": 0.24999976375094665
+    },
+    "prices": {
+      "BS": {
+        "price": 158.73469712833952,
+        "error_pct": 31.511762326710453,
+        "time": 0.0,
+        "valid": 

@@ -59,7 +59,7 @@ class MultiSymbolAnalyzer:
         
         try:
             # Get real options data
-            from main import get_real_options_data, get_historical_volatility
+            from main_pipeline import get_real_options_data, get_historical_volatility
             
             option_data = get_real_options_data(symbol)
             if not option_data:
@@ -68,7 +68,7 @@ class MultiSymbolAnalyzer:
             
             # Update global parameters
             global S0, K, T, r, sigma
-            from config import r
+            from configuration import r
             S0 = option_data['stock_price']
             K = option_data['strike']
             T = option_data['time_to_expiration']

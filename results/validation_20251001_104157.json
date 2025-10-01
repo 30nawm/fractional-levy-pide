@@ -1,0 +1,102 @@
+{
+  "numerical_stability": {
+    "extreme_parameters": [
+      {
+        "case": "high_skew_high_vol",
+        "price": 38.44093451661103,
+        "valid": "True",
+        "status": "PASS"
+      },
+      {
+        "case": "low_vol",
+        "price": 75.28431113516875,
+        "valid": "True",
+        "status": "PASS"
+      },
+      {
+        "case": "high_kurtosis",
+        "price": 54.41423548403818,
+        "valid": "True",
+        "status": "PASS"
+      }
+    ],
+    "grid_convergence": {
+      "prices": [
+        31.883093972656145,
+        31.80298167943104,
+        31.779678523864494
+      ],
+      "convergence_ratios": [
+        3.4378302542046857
+      ],
+      "avg_ratio": 3.4378302542046857,
+      "is_monotonic": "False",
+      "status": "FAIL"
+    }
+  },
+  "financial_consistency": {
+    "put_call_parity": {
+      "call_price": 29.2647792498803,
+      "put_price": 29.2647792498803,
+      "theoretical_diff": 4.877057549928594,
+      "market_diff": 0.0,
+      "error": 4.877057549928594,
+      "max_allowed": 0.5,
+      "status": "FAIL"
+    },
+    "arbitrage_bounds": {
+      "strikes": [
+        80.0,
+        90.0,
+        100.0,
+        110.00000000000001,
+        120.0
+      ],
+      "violations": [],
+      "status": "PASS"
+    }
+  },
+  "benchmarks": {
+    "zhang_2018": [
+      {
+        "name": "Case1_ATM",
+        "expected": 10.23,
+        "calculated": 29.2647792498803,
+        "error": 19.034779249880298,
+        "error_pct": 186.06822336148875,
+        "tolerance": 0.2,
+        "status": "FAIL"
+      },
+      {
+        "name": "Case2_OTM",
+        "expected": 2.17,
+        "calculated": 22.82200794939491,
+        "error": 20.652007949394907,
+        "error_pct": 951.7054354559866,
+        "tolerance": 0.1,
+        "status": "FAIL"
+      },
+      {
+        "name": "Case3_ITM",
+        "expected": 18.45,
+        "calculated": 35.50368756102019,
+        "error": 17.053687561020194,
+        "error_pct": 92.43191089983846,
+        "tolerance": 0.3,
+        "status": "FAIL"
+      }
+    ]
+  },
+  "performance": {
+    "timings": {
+      "BS": 0.0010254383087158203,
+      "VG_MC": 0.0,
+      "FRACTIONAL_PIDE": 1.703275442123413
+    },
+    "prices": {
+      "BS": 10.450583572185565,
+      "VG_MC": 10.382205176716743,
+      "FRACTIONAL_PIDE": 29.2647792498803
+    }
+  }
+}

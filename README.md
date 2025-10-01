@@ -232,10 +232,6 @@ Expected output:
 3. Madan, D., Carr, P., & Chang, E. (1998). "The Variance Gamma Process and Option Pricing"
 4. Cont, R., & Tankov, P. (2004). "Financial Modelling with Jump Processes"
 
-## License
-
-MIT License - See LICENSE file for details
-
 ## Contributing
 
 Contributions welcome. Please ensure:
@@ -243,13 +239,6 @@ Contributions welcome. Please ensure:
 - Code follows existing architecture
 - Documentation updated
 - Performance benchmarks met
-
-## Support
-
-For issues and questions:
-- GitHub Issues: [repository link]
-- Documentation: See `/docs` directory
-- Examples: See `/examples` directory
 
 ## Changelog
 
@@ -263,5 +252,3 @@ For issues and questions:
 - Configuration management
 
 ---
-
-**Note**: This is a professional quantitative finance implementation. Users should validate results independently and understand the mathematical framework before production use.
